@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Container, Header } from 'semantic-ui-react'
+import { Segment } from 'semantic-ui-react'
 import WordDetail from './WordDetail'
 import './WordContainer.css'
 
+
+let styles = {
+    backgroundColor: '#1C1C1C'
+}
 
 
 class WordContainer extends Component {
@@ -55,16 +60,16 @@ class WordContainer extends Component {
     render() {
         let word = this.state.words[this.state.currentIndex]
         return (
-            <div class="ui card">
-                <div class="card">
+            <Segment class="ui centered card" style={styles}>
+                <Segment class="card" inverted='true'>
                     <div class="content">
                         <h3> &there4; Word of the Moment  &there4;</h3>
-                        <div class="description">
+                        <div className="description">
                             {word && <WordDetail card={word} />}
                         </div>
                     </div>
-                </div>
-            </div>
+                </Segment>
+             </Segment>
         )
     }
 }

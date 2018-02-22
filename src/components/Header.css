@@ -1,5 +1,7 @@
 a {
-   color: red;
-   text-align: center;  
-   padding: 35vw;
+   color: #FFDD56;
+   /* padding: 35vw; */
+   font-size: 4vw;
+   align-content: center;
+   margin: 32.5vw;
 }

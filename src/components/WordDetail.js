@@ -7,11 +7,6 @@ class WordDetail extends Component {
     super(props)
     this.state = {
     }
-
-    let styles = {
-      color: 'grey',
-      padding: '10px',
-    }
   }
 
   render() {
