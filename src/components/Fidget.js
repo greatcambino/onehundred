@@ -9,7 +9,7 @@ function sketch (p) {
   
 
   p.setup = function () {
-	p.createCanvas(1100, 150);
+	p.createCanvas(70, 70);
 }
 
 //   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
@@ -20,9 +20,9 @@ function sketch (p) {
 
   p.draw = function () {
   p.translate(p.mouseX, p.mouseY);
-  p.rotate(p.angle); // continuously rotates the rect(angle)
+  p.rotate(angle); // continuously rotates the rect(angle)
   p.rect(-15, -15, 30, 30);
-  p.angle += 0.1;
+  angle += 0.1;
   }
 }
 

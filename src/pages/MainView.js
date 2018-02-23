@@ -17,8 +17,6 @@ class MainView extends Component {
                 <Header />
                 <WordContainer />
                 <Draft />
-                {/* <SaveButton /> */}
-                <Fidget />
             </div>
         )
     }

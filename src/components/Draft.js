@@ -19,28 +19,28 @@ class Draft extends Component {
   }  // add h1, style, color here
 
 
-render() {
-  return (
-    <div className="text-parent" >
-      <div className="text-fidget">
-        <TextArea onChange={(e) => this.wordCount(e)} placeholder="Hmm..." />
-        {/* <Fidget /> */}
-      </div>
+  render() {
+    return (
+      <div className="text-parent" >
+        <div className="text-fidget">
+        <Fidget />
+          <TextArea onChange={(e) => this.wordCount(e)} placeholder="Hmm..." />
+        </div>
 
-      <div class="ui centered header">
-        {this.state.count >= 100 ?
-          (<Button inverted className='wordbar' color='green' size='tiny'>
-            Words:  {this.state.count}
-        </Button>) && (<SaveButton/>)
+        <div class="ui centered header">
+          {this.state.count >= 100 ?
+            (<Button inverted className='wordbar' color='green' size='tiny'>
+              Words:  {this.state.count}
+            </Button>) && (<SaveButton />)
             :
-          (<Button disabled inverted className='wordbar' color='grey' size='tiny'>
-            Words:  {this.state.count}
+            (<Button disabled inverted className='wordbar' color='grey' size='tiny'>
+              Words:  {this.state.count}
             </Button>)}
+        </div>
       </div>
-    </div>
 
-  )
-}
+    )
+  }
 
 
 }
