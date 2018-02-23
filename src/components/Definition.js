@@ -8,7 +8,7 @@ const Definition = props => {
 
     return (
         <div> 
-            <h5> def { idx + 1 }:  { def.definitions[0] }</h5>
+            <h5> def. { idx + 1 }:  { def.definitions[0] }</h5>
         </div>
     )
 }

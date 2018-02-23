@@ -7,7 +7,7 @@ import './WordContainer.css'
 
 
 let styles = {
-    backgroundColor: '#1C1C1C'
+    backgroundColor: '#1B1B18'
 }
 
 
@@ -15,15 +15,15 @@ class WordContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            words: [],  //holds all words 
-            currentIndex: 0  // index of current word 
+            words: [],  
+            currentIndex: 0   
         }
 
         this.handleKeyUp = this.handleKeyUp.bind(this)
         this.next = this.next.bind(this)
     }
 
-    next() {   // increment currentIndex
+    next() {  
         let nextIndex = (this.state.currentIndex + 1) !== this.state.words.length
             ? this.state.currentIndex + 1
             : this.state.currentIndex
@@ -60,16 +60,14 @@ class WordContainer extends Component {
     render() {
         let word = this.state.words[this.state.currentIndex]
         return (
-            <Segment class="ui centered card" style={styles}>
-                <Segment class="card" inverted='true'>
+                <Segment class="ui centered card" style={styles}>
                     <div class="content">
-                        <h3> &there4; Word of the Moment  &there4;</h3>
                         <div className="description">
                             {word && <WordDetail card={word} />}
+                            <h3> TYPE  &larr;  OR  &rarr;  FOR ANOTHER WORD </h3>
                         </div>
                     </div>
                 </Segment>
-             </Segment>
         )
     }
 }

@@ -9,7 +9,8 @@
     "react-dom": "^16.2.0",
     "react-p5-wrapper": "0.0.4",
     "react-quill": "^1.2.2",
-    "react-scripts": "1.1.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.1",
     "react-style-tag": "^1.4.1",
     "semantic-ui-react": "^0.78.2"
   },

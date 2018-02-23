@@ -1,4 +1,17 @@
 textarea {
-    height: 30vw !important;
-    width: 60vw !important;
+    height: 25vw !important;
+    width: 37vw !important;
+}
+
+.text-fidget {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+}
+
+.text-parent {
+    width: 100vw;
+
 }

@@ -1,42 +1,49 @@
-// import React from'react';
-// import ReactDOM from 'react-dom';
-// import P5Wrapper from 'react-p5-wrapper';
-// import sketch from './sketches/sketch';
-// import sketch2 from './sketches/sketch2';
-// import App from './/App'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import P5Wrapper from 'react-p5-wrapper'
+import './Fidget.css'
+// import sketch from './sketches/sketch'
 
+function sketch (p) {
+	let angle = 0.0
+  
 
-import React from'react';
-import ReactDOM from 'react-dom';
-import P5Wrapper from 'react-p5-wrapper';
-import sketch from './sketches/sketch';
-
-class Fidget extends React.Component{
-
-	constructor(props) {
-		super(props);
-		this.state = {
-      stateSketch: sketch,
-    };
-	}
-
-	// rotationChange(e){
-	// 	this.setState({rotation:e.target.value});
-	// }
-
-	// pressEvent(){
-	// 	this.state.stateSketch === sketch ? this.setState({stateSketch:sketch2}) : this.setState({stateSketch:sketch});
-	// }
-
-	render () {
-		return (
-			<div>
-				<P5Wrapper sketch={this.state.stateSketch}/>
-				<input type="range" value={this.state.rotation}  min="0"  max="360" step="1" onInput={this.rotationChange.bind(this)}/>
-				<button onClick={this.pressEvent.bind(this)}>Change Sketch</button>
-			</div>
-		);
-	}
+  p.setup = function () {
+	p.createCanvas(1100, 150);
 }
 
-ReactDOM.render(<Fidget />, document.getElementById('app'));
+//   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
+//     if (props.angle) {
+//       angle = props.angle * Math.PI / 180
+//     }
+//   }
+
+  p.draw = function () {
+  p.translate(p.mouseX, p.mouseY);
+  p.rotate(p.angle); // continuously rotates the rect(angle)
+  p.rect(-15, -15, 30, 30);
+  p.angle += 0.1;
+  }
+}
+
+
+class Fidget extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      angle: 0.0,
+	  sketch  
+	}
+  }
+
+  render () {
+    return (
+      <div className="sketchwrapper">
+        <P5Wrapper sketch={this.state.sketch} />
+      </div>
+    )
+  }
+}
+
+export default Fidget
+

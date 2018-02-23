@@ -1,7 +1,24 @@
 a {
    color: #FFDD56;
    /* padding: 35vw; */
-   font-size: 4vw;
+   font-size: 8vw;
+   padding: 50px;
    align-content: center;
-   margin: 32.5vw;
+   /* margin: 32.5vw; */
+   font-family: 'Patua One', cursive;
+   /* font-family: 'Diplomata SC', cursive; */
 }
+
+.h1 {
+    color:#1B1B18;
+    padding: 90px;
+}
+
+h2 {
+    font-family: 'Patua One', cursive;
+
+    color: #FFDD56;
+    font-size: 2vw;
+
+}
+
